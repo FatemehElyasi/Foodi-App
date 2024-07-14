@@ -24,10 +24,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import ir.fatemelyasi.foodi.ui.theme.FoodiTheme
 
 @Composable
 fun TabLayout(
@@ -81,7 +79,7 @@ fun TabLayout(
             }
         }
         Spacer(modifier = Modifier.height(8.dp))
-        AnimatedContent(targetState = selectedIndex) { state->
+        AnimatedContent(targetState = selectedIndex, label = "") { state->
             items[state].second()
         }
     }
