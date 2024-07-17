@@ -79,7 +79,7 @@ fun AuthScreen(navController: NavController) {
         )
     }
 }
-
+//-----------------SignIn Screen
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SignIn(
@@ -98,6 +98,8 @@ fun SignIn(
     val showPassword = remember {
         mutableStateOf(false)
     }
+
+
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -116,6 +118,8 @@ fun SignIn(
             onValueChange = {
                 password.value = it
             },
+
+            //---------hide and show password
             label = "Password",
             visualTransformation = if (showPassword.value)
                 VisualTransformation.None
@@ -134,6 +138,7 @@ fun SignIn(
                 )
             }
         )
+        //---------forgot password setup
         Spacer(modifier = Modifier.height(8.dp))
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -141,6 +146,7 @@ fun SignIn(
         ) {
             Text(text = "Forgot Password?", color = Color.Gray, fontSize = 11.sp)
         }
+        //---------remember me setup
         Spacer(modifier = Modifier.height(8.dp))
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -158,6 +164,7 @@ fun SignIn(
                 modifier = Modifier.padding(horizontal = 8.dp)
             )
         }
+        //------------login button
         Spacer(modifier = Modifier.height(32.dp))
         Button(
             modifier = Modifier
@@ -178,7 +185,7 @@ fun SignIn(
         }
     }
 }
-
+//-----------------SignUp Screen
 @Composable
 fun SignUp(
     navController: NavController,
@@ -283,6 +290,7 @@ fun SignUp(
     }
 }
 
+//-----------------Custom TextField Component
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AppTextField(
