@@ -1,5 +1,6 @@
 package ir.fatemelyasi.foodi.view
 
+import FoodScreen
 import android.content.Context
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
@@ -7,7 +8,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import ir.fatemelyasi.foodi.view.screens.AuthScreen
-import ir.fatemelyasi.foodi.view.screens.FoodScreen
 import ir.fatemelyasi.foodi.view.screens.HomeScreen
 
 @Composable
